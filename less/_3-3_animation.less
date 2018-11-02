@@ -1,0 +1,179 @@
+/* --------------------------------
+ex)
+.am_t(ani, 1s);
+@keyframes ani {
+	0% {
+		color: red;
+	}
+	100% {
+		color: blue;
+	}
+}
+-------------------------------- */
+
+/* ================================
+ANIMATION
+================================ */
+// INITIAL
+.am_in(@in:initial) {
+	animation: @in;
+}
+.am_in-w(@in:initial) {
+	animation-direction: @in;
+}
+.am_in-d(@in:initial) {
+	animation-delay: @in;
+}
+.am_in-i(@in:initial) {
+	animation-iteration-count: @in;
+}
+.am_in-f(@in:none) {
+	animation-fill-mode: @in;
+}
+.am_in-p(@in:initial) {
+	animation-play-state: @in;
+}
+// --------------------------------
+// NAME
+.am_na(@n:ani) {
+	animation-name: @n;
+}
+// DURATION(Time)
+.am_du(@t:1s) {
+	animation-duration: @t;
+}
+// DIRECTION(Way) - normal, reverse, alternate, alternate-reverse
+.am_di(@d:reverse) {
+	animation-direction: @d;
+}
+// DELAY
+.am_de(@d:1s) {
+	animation-delay: @d;
+}
+// ITERATION COUNT
+.am_ic(@i:infinite) {
+	animation-iteration-count: @i;
+}
+// FILL MODE - none, forwards, backwards, both
+.am_fm(@m:forwards) {
+	animation-fill-mode: @m;
+}
+// PLAY STATE - paused, running
+.am_ps(@p:paused) {
+	animation-play-state: @p;
+}
+// TIMING FUNCTION
+.am_tf(@n1:0, @n2:1, @n3:0, @n4:1) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+// --------------------------------
+.am_t(@n:ani, @t:1s) {
+	animation+: @n @t;
+}
+.am_tw(@n:ani, @t:1s, @w:reverse) {
+	animation+: @n @t @w;
+}
+.am_td(@n:ani, @t:1s, @d:1s) {
+	animation+: @n @t @d;
+}
+.am_ti(@n:ani, @t:1s, @i:infinite) {
+	animation+: @n @t @i;
+}
+.am_twd(@n:ani, @t:1s, @w:reverse, @d:1s) {
+	animation+: @n @t @w @d;
+}
+.am_twi(@n:ani, @t:1s, @w:reverse, @i:infinite) {
+	animation+: @n @t @w @i;
+}
+.am_tdi(@n:ani, @t:1s, @d:1s, @i:infinite) {
+	animation+: @n @t @d @i;
+}
+// --------------------------------
+// FUNCTION
+.am_tf_l(@n1:0, @n2:0, @n3:1, @n4:1) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_e(@n1:0.25, @n2:0.1, @n3:0.25, @n4:1) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_ei(@n1:0.42, @n2:0, @n3:1, @n4:1) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eo(@n1:0, @n2:0, @n3:0.58, @n4:1) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eio(@n1:0.42, @n2:0, @n3:0.58, @n4:0) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_ei-sine(@n1:0.470, @n2:0.000, @n3:0.745, @n4:0.715) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eo-sine(@n1:0.390, @n2:0.575, @n3:0.565, @n4:1.000) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eio-sine(@n1:0.445, @n2:0.050, @n3:0.550, @n4:0.950) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_ei-quad(@n1:0.550, @n2:0.085, @n3:0.680, @n4:0.530) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eo-quad(@n1:0.250, @n2:0.460, @n3:0.450, @n4:0.940) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eio-quad(@n1:0.455, @n2:0.030, @n3:0.515, @n4:0.955) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_ei-cubic(@n1:0.550, @n2:0.055, @n3:0.675, @n4:0.190) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eo-cubic(@n1:0.215, @n2:0.610, @n3:0.355, @n4:1.000) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eio-cubic(@n1:0.645, @n2:0.045, @n3:0.355, @n4:1.000) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_ei-quart(@n1:0.895, @n2:0.030, @n3:0.685, @n4:0.220) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eo-quart(@n1:0.165, @n2:0.840, @n3:0.440, @n4:1.000) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eio-quart(@n1:0.770, @n2:0.000, @n3:0.175, @n4:1.000) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_ei-quint(@n1:0.755, @n2:0.050, @n3:0.855, @n4:0.060) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eo-quint(@n1:0.230, @n2:1.000, @n3:0.320, @n4:1.000) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eio-quint(@n1:0.860, @n2:0.000, @n3:0.070, @n4:1.000) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_ei-expo(@n1:0.950, @n2:0.050, @n3:0.795, @n4:0.035) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eo-expo(@n1:0.190, @n2:1.000, @n3:0.220, @n4:1.000) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eio-expo(@n1:1.000, @n2:0.000, @n3:0.000, @n4:1.000) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_ei-circ(@n1:0.600, @n2:0.040, @n3:0.980, @n4:0.335) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eo-circ(@n1:0.075, @n2:0.820, @n3:0.165, @n4:1.000) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eio-circ(@n1:0.785, @n2:0.135, @n3:0.150, @n4:0.860) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_ei-back(@n1:0.600, @n2:-0.280, @n3:0.735, @n4:0.045) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eo-back(@n1:0.175, @n2:0.885, @n3:0.320, @n4:1.275) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}
+.am_tf_eio-back(@n1:0.680, @n2:-0.550, @n3:0.265, @n4:1.550) {
+	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
+}

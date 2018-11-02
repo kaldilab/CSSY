@@ -1,0 +1,48 @@
+/* ================================
+FILTERS
+================================ */
+// INITIAL
+.ft_in(@a:none) {
+	filter: @a;
+}
+// --------------------------------
+// BLUR - (0px ~ *)
+.ft_bl(@a:5px) {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=!string!><filter id=!string!><feGaussianBlur in=!string!stdDeviation=!string!/></filter></svg>#blur");
+	filter: blur(@a);
+}
+// GRAYSCALE - (0 ~ 100%)
+.ft_gr(@a:100%) {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=!string!><filter id=!string!><feColorMatrix in=!string!type=!string!values=!string!/></filter></svg>#gray");
+	filter: grayscale(@a);
+}
+// SATURATE - (0 ~ 100% ~ *)
+.ft_sa(@a:125%) {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=!string!><filter id=!string!><feColorMatrix in=!string!type=!string!values=!string!/></filter></svg>#satu");
+	filter: saturate(@a);
+}
+// BRIGHTNESS - (0 ~ 100% ~ *)
+.ft_br(@a:125%) {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=!string!><filter id=!string!><feComponentTransfer><feFuncR type=!string!slope=!string!/><feFuncG type=!string!slope=!string!/><feFuncB type=!string!slope=!string!/></feComponentTransfer></filter></svg>#bright");
+	filter: brightness(@a);
+}
+// CONTRAST - (0 ~ 100% ~ *)
+.ft_co(@a:125%) {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=!string!><filter id=!string!><feComponentTransfer><feFuncR type=!string!slope=!string!intercept=!string!/><feFuncG type=!string!slope=!string!intercept=!string!/><feFuncB type=!string!slope=!string!intercept=!string!/></feComponentTransfer></filter></svg>#cont");
+	filter: contrast(@a);
+}
+// HUE-ROTATE (0 ~ 360deg)
+.ft_hu(@a:30deg) {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=!string!><filter id=!string!><feColorMatrix type=!string!values=!string!/></filter></svg>#hue");
+	filter: hue-rotate(@a);
+}
+// INVERT (0 ~ 100%)
+.ft_in(@a:none) {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=!string!><filter id=!string!><feComponentTransfer><feFuncR type=!string!slope=!string!intercept=!string!/><feFuncG type=!string!slope=!string!intercept=!string!/><feFuncB type=!string!slope=!string!intercept=!string!/></feComponentTransfer></filter></svg>#invert");
+	filter: invert(@a);
+}
+// SEPIA - (0 ~ 100%)
+.ft_se(@a:100%) {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=!string!><filter id=!string!><feColorMatrix in=!string!type=!string!values=!string!/></filter></svg>#sepia");
+	filter: sepia(@a);
+}

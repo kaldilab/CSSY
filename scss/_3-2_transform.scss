@@ -1,0 +1,131 @@
+/* ================================
+TRANSFORM
+================================ */
+// INITIAL
+@mixin tf_in($in:none) {
+	transform: $in;
+}
+@mixin tf_in-o($in:initial) {
+	transform-origin: $in;
+}
+@mixin tf_in-s($in:initial) {
+	transform-style: $in;
+}
+// --------------------------------
+// MULTIPLE
+@mixin tf_m($m) {
+	transform: $m;
+}
+// --------------------------------
+// TRANSLATE
+@mixin tf_trx($x:10px) {
+	transform: translateX($x);
+}
+@mixin tf_try($y:10px) {
+	transform: translateY($y);
+}
+@mixin tf_trz($z:10px) {
+	transform: translateZ($z);
+}
+@mixin tf_tr($x:10px, $y:null, $z:null) {
+	@if $y == null and $z == null {
+		transform: translate($x, $x);
+	}
+	@if $y != null and $z == null {
+		transform: translate($x, $y);
+	}
+	@if $y != null and $z != null {
+		transform: translate3d($x, $y, $z);
+	}
+}
+// --------------------------------
+// SCALE
+@mixin tf_scx($x:1.5) {
+	transform: scaleX($x);
+}
+@mixin tf_scy($y:1.5) {
+	transform: scaleY($y);
+}
+@mixin tf_scz($z:1.5) {
+	transform: scaleZ($z);
+}
+@mixin tf_sc($x:1.5, $y:null, $z:null) {
+	@if $y == null and $z == null {
+		transform: scale($x, $x);
+	}
+	@if $y != null and $z == null {
+		transform: scale($x, $y);
+	}
+	@if $y != null and $z != null {
+		transform: scale3d($x, $y, $z);
+	}
+}
+// --------------------------------
+// ROTATE
+@mixin tf_rox($x:10deg) {
+	transform: rotateX($x);
+}
+@mixin tf_roy($y:10deg) {
+	transform: rotateY($y);
+}
+@mixin tf_roz($z:10deg) {
+	transform: rotateZ($z);
+}
+@mixin tf_ro($x:10deg, $y:null, $z:null) {
+	@if $y == null {
+		transform: rotate($x);
+	}
+	@if $y != null {
+		transform: rotateX($x) rotateY($y) rotateZ($z);
+	}
+}
+// --------------------------------
+// SKEW
+@mixin tf_skx($x:10deg) {
+	transform: skewX($x);
+}
+@mixin tf_sky($y:10deg) {
+	transform: skewY($y);
+}
+@mixin tf_sk($x:10deg, $y:null) {
+	@if $y == null {
+		transform: skew($x, $x);
+	}
+	@if $y != null {
+		transform: skew($x, $y);
+	}
+}
+// --------------------------------
+// ORIGIN
+@mixin tf_or($x:50%, $y:null) {
+	@if $y == null {
+		transform-origin: $x $x;
+	}
+	@if $y != null {
+		transform-origin: $x $y;
+	}
+}
+// --------------------------------
+// PERSPECTIVE & PERSPECTIVE ORIGIN
+// $o:p(parent element), c(child element)
+@mixin tf_pe($p:100px, $o:c, $x:null, $y:null) {
+	@if $o == c and $x == null and $y == null {
+		transform: perspective($p);
+	}
+	@if $o == p and $x == null and $y == null {
+		perspective: $p;
+	}
+	@if $o == p and $x != null and $y == null {
+		perspective: $p;
+		perspective-origin: $x $x;
+	}
+	@if $o == p and $x != null and $y != null {
+		perspective: $p;
+		perspective-origin: $x $y;
+	}
+}
+// --------------------------------
+// STYLE - flat, preserve-3d
+@mixin tf_st($s:preserve-3d) {
+	transform-style: $s;
+}

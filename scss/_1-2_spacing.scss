@@ -1,0 +1,216 @@
+/* ================================
+SPACING
+================================ */
+// WIDTH
+@mixin w($w:auto) {
+	width: $w;
+}
+// HEIGHT & LINE HEIGHT
+@mixin h($h:auto, $lh:null) {
+	@if $lh == null {
+		height: $h;
+	}
+	@if $lh != null {
+		height: $h;
+		line-height: $lh;
+	}
+}
+// WIDTH & HEIGHT
+@mixin wh($w:auto, $h:null, $lh:null) {
+	@if $h == null and $lh == null {
+		width: $w;
+		height: $w;
+	}
+	@if $h != null and $lh == null {
+		width: $w;
+		height: $h;
+	}
+	@if $h != null and $lh != null {
+		width: $w;
+		height: $h;
+		line-height: $lh;
+	}
+}
+// --------------------------------
+// MAX WIDTH
+@mixin mxw($w:auto) {
+	max-width: $w;
+}
+// MIN WIDTH
+@mixin mnw($w:auto) {
+	min-width: $w;
+}
+// MAX HEIGHT
+@mixin mxh($h:auto) {
+	max-height: $h;
+}
+// MIN HEIGHT
+@mixin mnh($h:auto) {
+	min-height: $h;
+}
+// --------------------------------
+// PADDING
+@mixin p($p:0) {
+	padding: $p;
+}
+// MARGIN
+@mixin m($m:0) {
+	margin: $m;
+}
+// PADDING & MARGIN
+@mixin pm($p:0, $m:null) {
+	@if $m == null {
+		padding: $p;
+		margin: $p;
+	}
+	@if $m != null {
+		padding: $p;
+		margin: $m;
+	}
+}
+// --------------------------------
+@mixin pt($p:0) {
+	padding-top: $p;
+}
+@mixin pb($p:0) {
+	padding-bottom: $p;
+}
+@mixin pl($p:0) {
+	padding-left: $p;
+}
+@mixin pr($p:0) {
+	padding-right: $p;
+}
+@mixin ptb($t:0, $b:null) {
+	@if $b == null {
+		padding-top: $t;
+		padding-bottom: $t;
+	}
+	@if $b != null {
+		padding-top: $t;
+		padding-bottom: $b;
+	}
+}
+@mixin plr($l:0, $r:null) {
+	@if $r == null {
+		padding-left: $l;
+		padding-right: $l;
+	}
+	@if $r != null {
+		padding-left: $l;
+		padding-right: $r;
+	}
+}
+@mixin ptl($t:0, $l:null) {
+	@if $l == null {
+		padding-top: $t;
+		padding-left: $t;
+	}
+	@if $l != null {
+		padding-top: $t;
+		padding-left: $l;
+	}
+}
+@mixin ptr($t:0, $r:null) {
+	@if $r == null {
+		padding-top: $t;
+		padding-right: $t;
+	}
+	@if $r != null {
+		padding-top: $t;
+		padding-right: $r;
+	}
+}
+@mixin pbl($b:0, $l:null) {
+	@if $l == null {
+		padding-bottom: $b;
+		padding-left: $b;
+	}
+	@if $l != null {
+		padding-bottom: $b;
+		padding-left: $l;
+	}
+}
+@mixin pbr($b:0, $r:null) {
+	@if $r == null {
+		padding-bottom: $b;
+		padding-right: $b;
+	}
+	@if $r != null {
+		padding-bottom: $b;
+		padding-right: $r;
+	}
+}
+// --------------------------------
+@mixin mt($m:0) {
+	margin-top: $m;
+}
+@mixin mb($m:0) {
+	margin-bottom: $m;
+}
+@mixin ml($m:0) {
+	margin-left: $m;
+}
+@mixin mr($m:0) {
+	margin-right: $m;
+}
+@mixin mtb($t:0, $b:null) {
+	@if $b == null {
+		margin-top: $t;
+		margin-bottom: $t;
+	}
+	@if $b != null {
+		margin-top: $t;
+		margin-bottom: $b;
+	}
+}
+@mixin mlr($l:0, $r:null) {
+	@if $r == null {
+		margin-left: $l;
+		margin-right: $l;
+	}
+	@if $r != null {
+		margin-left: $l;
+		margin-right: $r;
+	}
+}
+@mixin mtl($t:0, $l:null) {
+	@if $l == null {
+		margin-top: $t;
+		margin-left: $t;
+	}
+	@if $l != null {
+		margin-top: $t;
+		margin-left: $l;
+	}
+}
+@mixin mtr($t:0, $r:null) {
+	@if $r == null {
+		margin-top: $t;
+		margin-right: $t;
+	}
+	@if $r != null {
+		margin-top: $t;
+		margin-right: $r;
+	}
+}
+@mixin mbl($b:0, $l:null) {
+	@if $l == null {
+		margin-bottom: $b;
+		margin-left: $b;
+	}
+	@if $l != null {
+		margin-bottom: $b;
+		margin-left: $l;
+	}
+}
+@mixin mbr($b:0, $r:null) {
+	@if $r == null {
+		margin-bottom: $b;
+		margin-right: $b;
+	}
+	@if $r != null {
+		margin-bottom: $b;
+		margin-right: $r;
+	}
+}

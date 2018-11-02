@@ -1,0 +1,221 @@
+/* ================================
+SHORTCUT
+================================ */
+// FONT SIZE
+@mixin fs($f:10px) {
+	font-size: $f;
+}
+// FONT WEIGHT
+@mixin fw($f:bold) {
+	font-weight: $f;
+}
+// FONT FAMILY
+@mixin ff($f...) {
+	font-family: $f;
+}
+// LETTER SPACING
+@mixin ls($l:10px) {
+	letter-spacing: $l;
+}
+// WORD SPACING
+@mixin ws($w:1px) {
+	word-spacing: $w;
+}
+// WORD BREAK
+@mixin wb($w:keep-all) {
+	word-break: $w;
+}
+// LINE HEIGHT
+@mixin lh($l:1.2) {
+	line-height: $l;
+}
+// TEXT DECORATION
+@mixin td($t:underline) {
+	text-decoration: $t;
+}
+// TEXT TRANSFORM
+@mixin tt($t:uppercase) {
+	text-transform: $t;
+}
+// VERTICAL ALIGN
+@mixin va($v:middle) {
+	vertical-align: $v;
+}
+// TEXT INDENT
+@mixin ti($t:10px) {
+	text-indent: $t;
+}
+// OUTLINE OFFSET
+@mixin oo($o:5px) {
+	outline-offset: $o;
+}
+// Z-INDEX
+@mixin zi($z:1) {
+	z-index: $z;
+}
+// FONT STYLE
+@mixin fsy($f:italic) {
+	font-style: $f;
+}
+// WHITE SPACE
+@mixin wsa($w:nowrap) {
+	white-space: $w;
+}
+// WORD WRAP
+@mixin ww($w:break-word) {
+	word-wrap: $w;
+}
+// LIST STYLE
+@mixin lsy($l:disc, $p:inside, $i:none) {
+	list-style: $l $p $i;
+}
+// --------------------------------
+// CLEAR
+@mixin cl($c:both) {
+	clear: $c;
+}
+// VISIBILITY
+@mixin vi($p:hidden) {
+	visibility: $p;
+}
+// CURSOR
+@mixin cu($c:pointer) {
+	cursor: $c;
+}
+// OVERFLOW
+@mixin ov($o:hidden) {
+	overflow: $o;
+}
+// OVERFLOW-X
+@mixin ovx($o:auto) {
+	overflow-x: $o;
+}
+// OVERFLOW-Y
+@mixin ovy($o:auto) {
+	overflow-y: $o;
+}
+// OPACITY
+@mixin op($o:0) {
+	opacity: $o;
+}
+// CONTENT
+@mixin co($c:'') {
+	content: $c;
+}
+// OUTLINE
+@mixin ou($o:none) {
+	outline: $o;
+}
+// FILTER
+@mixin fi($f:none) {
+	filter: $f;
+}
+// WILL CHANGE
+@mixin wc($w:transform) {
+	will-change: $w;
+}
+// RESIZE
+@mixin re($r:none) {
+	resize: $r;
+}
+// POINTER EVENTS
+@mixin pe($p:none) {
+	pointer-events: $p;
+}
+// --------------------------------
+// TEXT ALIGN
+@mixin ta($x:in, $t:initial) {
+	@if $x == in {
+		text-align: $t;
+	}
+	@else if $x == c {
+		text-align: center;
+	}
+	@else if $x == l {
+		text-align: left;
+	}
+	@else if $x == r {
+		text-align: right;
+	}
+	@else if $x == j {
+		text-align: justify;
+	}
+}
+// --------------------------------
+// FLOAT
+@mixin fl($x:in, $f:initial) {
+	@if $x == in {
+		float: $f;
+	}
+	@else if $x == l {
+		float: left;
+	}
+	@else if $x == r {
+		float: right;
+	}
+	@else if $x == n {
+		float: none;
+	}
+}
+// --------------------------------
+// DISPLAY
+@mixin di($x:in, $d:initial) {
+	@if $x == in {
+		display: $d;
+	}
+	@else if $x == b {
+		display: block;
+	}
+	@else if $x == i {
+		display: inline;
+	}
+	@else if $x == ib {
+		display: inline-block;
+	}
+	@else if $x == if {
+		display: inline-flex;
+	}
+	@else if $x == li {
+		display: list-item;
+	}
+	@else if $x == t {
+		display: table;
+	}
+	@else if $x == tc {
+		display: table-cell;
+	}
+	@else if $x == n {
+		display: none;
+	}
+}
+// --------------------------------
+// BOX SIZING
+@mixin bs($bs:border-box) {
+	box-sizing: $bs;
+}
+// HYPHENS
+@mixin hy($hy:auto) {
+	-webkit-hyphens: $hy;
+	hyphens: $hy;
+}
+// BACKFACE VISIBILITY
+@mixin bv($bv:hidden) {
+	-webkit-backface-visibility: $bv;
+	backface-visibility: $bv;
+}
+// TEXT SIZE ADJUST
+@mixin ts($ts:100%) {
+	-webkit-text-size-adjust: $ts;
+	text-size-adjust: $ts;
+}
+// OVERFLOW SCROLLING
+@mixin os($os:touch) {
+	-webkit-overflow-scrolling: $os;
+	overflow-scrolling: $os;
+}
+// APPEARANCE
+@mixin ap($ap:none) {
+	-webkit-appearance: $ap;
+	-moz-appearance: $ap;
+	appearance: $ap;
+}

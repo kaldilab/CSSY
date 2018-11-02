@@ -1,0 +1,115 @@
+/* --------------------------------
+ex)
+@include lg_s2(360deg, red, 20%, blue, 60%);
+@include lg_s2(360deg, red, 20%, blue, 60%, 0, 1);
+@include lgr_s2(360deg, red, 20%, blue, 60%);
+@include lgr_s2(360deg, red, 20%, blue, 60%, 0, 1);
+@include rg_s2(50% 50%, red, 20%, blue, 60%, $s: circle);
+@include rg_s2(50% 50%, red, 20%, blue, 60%, 0, 1, circle);
+@include rgr_s2(50% 50%, red, 20%, blue, 60%, $s: circle);
+@include rgr_s2(50% 50%, red, 20%, blue, 60%, 0, 1, circle);
+-------------------------------- */
+
+/* ================================
+LINEAR GRADIENT
+================================ */
+// MULTIPLE
+@mixin lg_sm($d, $m...) {
+	background-image: linear-gradient($d, $m);
+}
+@mixin lg_s2($d, $c1, $x1, $c2, $x2, $a1:1, $a2:1) {
+	background-image: linear-gradient($d, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2);
+}
+@mixin lg_s3($d, $c1, $x1, $c2, $x2, $c3, $x3, $a1:1, $a2:1, $a3:1) {
+	background-image: linear-gradient($d, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3);
+}
+@mixin lg_s4($d, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $a1:1, $a2:1, $a3:1, $a4:1) {
+	background-image: linear-gradient($d, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4);
+}
+@mixin lg_s5($d, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $c5, $x5, $a1:1, $a2:1, $a3:1, $a4:1, $a5:1) {
+	background-image: linear-gradient($d, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4, rgba($c5, $a5) $x5);
+}
+@mixin lg_s6($d, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $c5, $x5, $c6, $x6, $a1:1, $a2:1, $a3:1, $a4:1, $a5:1, $a6:1) {
+	background-image: linear-gradient($d, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4, rgba($c5, $a5) $x5, rgba($c6, $a6) $x6);
+}
+@mixin lg_s7($d, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $c5, $x5, $c6, $x6, $c7, $x7, $a1:1, $a2:1, $a3:1, $a4:1, $a5:1, $a6:1, $a7:1) {
+	background-image: linear-gradient($d, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4, rgba($c5, $a5) $x5, rgba($c6, $a6) $x6, rgba($c7, $a7) $x7);
+}
+
+/* ================================
+LINEAR GRADIENT - REPEATING
+================================ */
+// MULTIPLE
+@mixin lgr_sm($d, $m...) {
+	background-image: repeating-linear-gradient($d, $m);
+}
+@mixin lgr_s2($d, $c1, $x1, $c2, $x2, $a1:1, $a2:1) {
+	background-image: repeating-linear-gradient($d, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2);
+}
+@mixin lgr_s3($d, $c1, $x1, $c2, $x2, $c3, $x3, $a1:1, $a2:1, $a3:1) {
+	background-image: repeating-linear-gradient($d, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3);
+}
+@mixin lgr_s4($d, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $a1:1, $a2:1, $a3:1, $a4:1) {
+	background-image: repeating-linear-gradient($d, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4);
+}
+@mixin lgr_s5($d, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $c5, $x5, $a1:1, $a2:1, $a3:1, $a4:1, $a5:1) {
+	background-image: repeating-linear-gradient($d, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4, rgba($c5, $a5) $x5);
+}
+@mixin lgr_s6($d, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $c5, $x5, $c6, $x6, $a1:1, $a2:1, $a3:1, $a4:1, $a5:1, $a6:1) {
+	background-image: repeating-linear-gradient($d, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4, rgba($c5, $a5) $x5, rgba($c6, $a6) $x6);
+}
+@mixin lgr_s7($d, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $c5, $x5, $c6, $x6, $c7, $x7, $a1:1, $a2:1, $a3:1, $a4:1, $a5:1, $a6:1, $a7:1) {
+	background-image: repeating-linear-gradient($d, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4, rgba($c5, $a5) $x5, rgba($c6, $a6) $x6, rgba($c7, $a7) $x7);
+}
+
+/* ================================
+RADIAL GRADIENT
+================================ */
+// MULTIPLE
+@mixin rg_sm($p, $s, $m...) {
+	background-image: radial-gradient($s at $p, $m);
+}
+@mixin rg_s2($p, $c1, $x1, $c2, $x2, $a1:1, $a2:1, $s:ellipse) {
+	background-image: radial-gradient($s at $p, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2);
+}
+@mixin rg_s3($p, $c1, $x1, $c2, $x2, $c3, $x3, $a1:1, $a2:1, $a3:1, $s:ellipse) {
+	background-image: radial-gradient($s at $p, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3);
+}
+@mixin rg_s4($p, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $a1:1, $a2:1, $a3:1, $a4:1, $s:ellipse) {
+	background-image: radial-gradient($s at $p, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4);
+}
+@mixin rg_s5($p, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $c5, $x5, $a1:1, $a2:1, $a3:1, $a4:1, $a5:1, $s:ellipse) {
+	background-image: radial-gradient($s at $p, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4, rgba($c5, $a5) $x5);
+}
+@mixin rg_s6($p, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $c5, $x5, $c6, $x6, $a1:1, $a2:1, $a3:1, $a4:1, $a5:1, $a6:1, $s:ellipse) {
+	background-image: radial-gradient($s at $p, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4, rgba($c5, $a5) $x5, rgba($c6, $a6) $x6);
+}
+@mixin rg_s7($p, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $c5, $x5, $c6, $x6, $c7, $x7, $a1:1, $a2:1, $a3:1, $a4:1, $a5:1, $a6:1, $a7:1, $s:ellipse) {
+	background-image: radial-gradient($s at $p, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4, rgba($c5, $a5) $x5, rgba($c6, $a6) $x6, rgba($c7, $a7) $x7);
+}
+
+/* ================================
+RADIAL GRADIENT - REPEATING
+================================ */
+// MULTIPLE
+@mixin rgr_sm($p, $s, $m...) {
+	background-image: repeating-radial-gradient($s at $p, $m);
+}
+@mixin rgr_s2($p, $c1, $x1, $c2, $x2, $a1:1, $a2:1, $s:ellipse) {
+	background-image: repeating-radial-gradient($s at $p, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2);
+}
+@mixin rgr_s3($p, $c1, $x1, $c2, $x2, $c3, $x3, $a1:1, $a2:1, $a3:1, $s:ellipse) {
+	background-image: repeating-radial-gradient($s at $p, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3);
+}
+@mixin rgr_s4($p, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $a1:1, $a2:1, $a3:1, $a4:1, $s:ellipse) {
+	background-image: repeating-radial-gradient($s at $p, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4);
+}
+@mixin rgr_s5($p, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $c5, $x5, $a1:1, $a2:1, $a3:1, $a4:1, $a5:1, $s:ellipse) {
+	background-image: repeating-radial-gradient($s at $p, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4, rgba($c5, $a5) $x5);
+}
+@mixin rgr_s6($p, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $c5, $x5, $c6, $x6, $a1:1, $a2:1, $a3:1, $a4:1, $a5:1, $a6:1, $s:ellipse) {
+	background-image: repeating-radial-gradient($s at $p, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4, rgba($c5, $a5) $x5, rgba($c6, $a6) $x6);
+}
+@mixin rgr_s7($p, $c1, $x1, $c2, $x2, $c3, $x3, $c4, $x4, $c5, $x5, $c6, $x6, $c7, $x7, $a1:1, $a2:1, $a3:1, $a4:1, $a5:1, $a6:1, $a7:1, $s:ellipse) {
+	background-image: repeating-radial-gradient($s at $p, rgba($c1, $a1) $x1, rgba($c2, $a2) $x2, rgba($c3, $a3) $x3, rgba($c4, $a4) $x4, rgba($c5, $a5) $x5, rgba($c6, $a6) $x6, rgba($c7, $a7) $x7);
+}

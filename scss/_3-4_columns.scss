@@ -1,0 +1,63 @@
+/* ================================
+COLUMNS
+================================ */
+// INITIAL
+@mixin cl_in($in:initial) {
+	columns: $in;
+}
+@mixin cl_in-c($in:initial) {
+	column-count: $in;
+}
+@mixin cl_in-w($in:initial) {
+	column-width: $in;
+}
+@mixin cl_in-g($in:initial) {
+	column-gap: $in;
+}
+// --------------------------------
+// COLUMNS
+@mixin cl_col($co:2, $wi:auto) {
+	columns: $wi $co;
+}
+// --------------------------------
+// COUNT
+@mixin cl_co($c:auto) {
+	column-count: $c;
+}
+// WIDTH
+@mixin cl_wi($w:auto) {
+	column-width: $w;
+}
+// GAP
+@mixin cl_ga($g:10px) {
+	column-gap: $g;
+}
+// RULE
+@mixin cl_ru($w:1px, $c:$c-0, $s:solid, $a:1) {
+	column-rule: $w $s rgba($c, $a);
+}
+// SPAN(Except Mozilla) - none, all
+@mixin cl_sp($s:all) {
+	column-span: $s;
+}
+// FILL - balance, auto
+@mixin cl_fi($f:auto) {
+	column-fill: $f;
+}
+// --------------------------------
+@mixin cl_c($co:2, $wi:auto) {
+	@include cl_col($wi, $co);
+}
+@mixin cl_cg($co:2, $wi:auto, $g:10px) {
+	@include cl_col($wi, $co);
+	@include cl_ga($g);
+}
+@mixin cl_cr($co:2, $wi:auto, $w:1px, $c:$c-0, $s:solid, $a:1) {
+	@include cl_col($wi, $co);
+	@include cl_ru($w, $c, $s, $a);
+}
+@mixin cl_cgr($co:2, $wi:auto, $g:10px, $w:1px, $c:$c-0, $s:solid, $a:1) {
+	@include cl_col($wi, $co);
+	@include cl_ga($g);
+	@include cl_ru($w, $c, $s, $a);
+}

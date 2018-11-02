@@ -1,0 +1,113 @@
+/* ================================
+BORDER
+================================ */
+// INITIAL
+@mixin bd_in($in:none) {
+	border: $in;
+}
+@mixin bd_in-t($in:none) {
+	border-top: $in;
+}
+@mixin bd_in-b($in:none) {
+	border-bottom: $in;
+}
+@mixin bd_in-l($in:none) {
+	border-left: $in;
+}
+@mixin bd_in-r($in:none) {
+	border-right: $in;
+}
+@mixin bd_in-tb($in:none) {
+	border-top: $in;
+	border-bottom: $in;
+}
+@mixin bd_in-lr($in:none) {
+	border-left: $in;
+	border-right: $in;
+	border-right: $in;
+}
+@mixin bd_in-tl($in:none) {
+	border-top: $in;
+	border-left: $in;
+}
+@mixin bd_in-tr($in:none) {
+	border-top: $in;
+	border-right: $in;
+}
+@mixin bd_in-br($in:none) {
+	border-bottom: $in;
+	border-right: $in;
+}
+@mixin bd_in-bl($in:none) {
+	border-bottom: $in;
+	border-left: $in;
+}
+// --------------------------------
+@mixin bd_w($w:1px) {
+	border-width: $w;
+}
+@mixin bd_c($c:$c-0, $a:1) {
+	border-color: rgba($c, $a);
+}
+@mixin bd_s($s:solid) {
+	border-style: $s;
+}
+@mixin bd_wc($w:1px, $c:$c-0, $a:1) {
+	border-width: $w;
+	border-color: rgba($c, $a);
+}
+@mixin bd_ws($w:1px, $s:solid) {
+	border-width: $w;
+	border-style: $s;
+}
+@mixin bd_cs($c:$c-0, $a:1, $s:solid) {
+	border-color: rgba($c, $a);
+	border-style: $s;
+}
+// --------------------------------
+// TOP
+@mixin bd_t($w:1px, $c:$c-0, $a:1, $s:solid) {
+	border-top: $w $s rgba($c, $a);
+}
+// BOTTOM
+@mixin bd_b($w:1px, $c:$c-0, $a:1, $s:solid) {
+	border-bottom: $w $s rgba($c, $a);
+}
+// LEFT
+@mixin bd_l($w:1px, $c:$c-0, $a:1, $s:solid) {
+	border-left: $w $s rgba($c, $a);
+}
+// RIGHT
+@mixin bd_r($w:1px, $c:$c-0, $a:1, $s:solid) {
+	border-right: $w $s rgba($c, $a);
+}
+// --------------------------------
+@mixin bd_tb($w:1px, $c:$c-0, $a:1, $s:solid) {
+	@include bd_t($w, $c, $a, $s);
+	@include bd_b($w, $c, $a, $s);
+}
+@mixin bd_lr($w:1px, $c:$c-0, $a:1, $s:solid) {
+	@include bd_l($w, $c, $a, $s);
+	@include bd_r($w, $c, $a, $s);
+}
+@mixin bd_tl($w:1px, $c:$c-0, $a:1, $s:solid) {
+	@include bd_t($w, $c, $a, $s);
+	@include bd_l($w, $c, $a, $s);
+}
+@mixin bd_tr($w:1px, $c:$c-0, $a:1, $s:solid) {
+	@include bd_t($w, $c, $a, $s);
+	@include bd_r($w, $c, $a, $s);
+}
+@mixin bd_br($w:1px, $c:$c-0, $a:1, $s:solid) {
+	@include bd_b($w, $c, $a, $s);
+	@include bd_r($w, $c, $a, $s);
+}
+@mixin bd_bl($w:1px, $c:$c-0, $a:1, $s:solid) {
+	@include bd_b($w, $c, $a, $s);
+	@include bd_l($w, $c, $a, $s);
+}
+// --------------------------------
+// ALL
+@mixin bd_all($w:1px, $c:$c-0, $a:1, $s:solid) {
+	border: $w $s rgba($c, $a);
+}

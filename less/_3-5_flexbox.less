@@ -1,0 +1,173 @@
+/* ================================
+FLEXBOX - FLEXBOX CONTAINER
+================================ */
+// INITIAL
+.fc_in(@in:block) {
+	display: @in;
+}
+.fc_in-d(@in:initial) {
+	flex-direction: @in;
+}
+.fc_in-h(@in:initial) {
+	justify-content: @in;
+}
+.fc_in-v(@in:initial) {
+	align-items: @in;
+}
+.fc_in-w(@in:initial) {
+	flex-wrap: @in;
+}
+.fc_in-a(@in:initial) {
+	align-content: @in;
+}
+.fc_in-f(@in:initial) {
+	flex-flow: @in;
+}
+// --------------------------------
+// FLEXBOX - flex, inline-flex
+.fc_flex(@f:flex) {
+	display: @f;
+}
+// DIRECTION - row, row-reverse, column, column-reverse
+.fc_di(@d:row) {
+	flex-direction: @d;
+}
+// JUSTIFY CONTENT(Horizontal) - flex-start, flex-end, center, space-between, space-around
+.fc_ho(@h:center) {
+	justify-content: @h;
+}
+// ALIGN ITEMS(Vertical) - flex-start, flex-end, center, baseline, stretch
+.fc_ve(@v:center) {
+	align-items: @v;
+}
+// WRAP - nowrap, wrap, wrap-reverse
+.fc_wr(@w:wrap) {
+	flex-wrap: @w;
+}
+// ALIGN CONTENT(Align) - flex-start, flex-end, center, space-between, space-around, stretch
+.fc_al(@a:center) {
+	align-content: @a;
+}
+// FLOW(Direction Wrap) - row, row-reverse, column, column-reverse | nowrap, wrap, wrap-reverse
+.fc_fl(@f1:row, @f2:wrap) {
+	flex-flow: @f1 @f2;
+}
+// --------------------------------
+.fc_f(@f:flex) {
+	.fc_flex(@f);
+}
+.fc_fh(@h:center, @f:flex) {
+	.fc_flex(@f);
+	.fc_ho(@h);
+}
+.fc_fv(@v:center, @f:flex) {
+	.fc_flex(@f);
+	.fc_ve(@v);
+}
+.fc_fhv(@h:center, @v:center, @f:flex) {
+	.fc_flex(@f);
+	.fc_ho(@h);
+	.fc_ve(@v);
+}
+// --------------------------------
+.fc_ff(@f1:row, @f2:wrap, @f:flex) {
+	.fc_flex(@f);
+	.fc_fl(@f1, @f2);
+}
+.fc_ffh(@f1:row, @f2:wrap, @h:center, @f:flex) {
+	.fc_flex(@f);
+	.fc_fl(@f1, @f2);
+	.fc_ho(@h);
+}
+.fc_ffv(@f1:row, @f2:wrap, @v:center, @f:flex) {
+	.fc_flex(@f);
+	.fc_fl(@f1, @f2);
+	.fc_ve(@v);
+}
+.fc_ffa(@f1:row, @f2:wrap, @a:center, @f:flex) {
+	.fc_flex(@f);
+	.fc_fl(@f1, @f2);
+	.fc_al(@a);
+}
+.fc_ffhv(@f1:row, @f2:wrap, @h:center, @v:center, @f:flex) {
+	.fc_flex(@f);
+	.fc_fl(@f1, @f2);
+	.fc_ho(@h);
+	.fc_ve(@v);
+}
+.fc_ffha(@f1:row, @f2:wrap, @h:center, @a:center, @f:flex) {
+	.fc_flex(@f);
+	.fc_fl(@f1, @f2);
+	.fc_ho(@h);
+	.fc_al(@a);
+}
+.fc_ffva(@f1:row, @f2:wrap, @v:center, @a:center, @f:flex) {
+	.fc_flex(@f);
+	.fc_fl(@f1, @f2);
+	.fc_ve(@v);
+	.fc_al(@a);
+}
+.fc_ffhva(@f1:row, @f2:wrap, @h:center, @v:center, @a:center, @f:flex) {
+	.fc_flex(@f);
+	.fc_fl(@f1, @f2);
+	.fc_ho(@h);
+	.fc_ve(@v);
+	.fc_al(@a);
+}
+
+/* ================================
+FLEXBOX - FLEXBOX ITEMS
+================================ */
+// INITIAL
+.fi_in(@in:none) {
+	flex: @in;
+}
+.fi_in-g(@in:initial) {
+	flex-grow: @in;
+}
+.fi_in-s(@in:initial) {
+	flex-shrink: @in;
+}
+.fi_in-b(@in:initial) {
+	flex-basis: @in;
+}
+.fi_in-a(@in:initial) {
+	align-self: @in;
+}
+.fi_in-o(@in:initial) {
+	order: @in;
+}
+// --------------------------------
+// FLEX
+.fi_flex(@g:auto, @s:1, @b:auto) {
+	& when not (isnumber(@g)) {
+		flex: @g;
+	}
+	& when (isnumber(@g)) {
+		flex: @g @s @b;
+	}
+}
+// GROW
+.fi_gr(@g:1) {
+	flex-grow: @g;
+}
+// SHRINK
+.fi_sh(@s:1) {
+	flex-shrink: @s;
+}
+// BASIS
+.fi_ba(@b:50%) {
+	flex-basis: @b;
+}
+// ALIGN - flex-start, flex-end, center, baseline, stretch, auto
+.fi_al(@a:center) {
+	align-self: @a;
+}
+// ORDER
+.fi_or(@o:1) {
+	order: @o;
+}
+// --------------------------------
+.fi_f(@g:1, @s:1, @b:auto) {
+	.fi_flex(@g, @s, @b);
+}

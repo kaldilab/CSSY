@@ -1,0 +1,101 @@
+/* ================================
+BACKGROUND
+================================ */
+// INITIAL
+@mixin bg_in($in:none) {
+	background: $in;
+}
+@mixin bg_in-c($in:transparent) {
+	background-color: $in;
+}
+@mixin bg_in-i($in:none) {
+	background-image: $in;
+}
+// --------------------------------
+// COLOR
+@mixin bg_co($c:$c-0, $a:1) {
+	background-color: rgba($c, $a);
+}
+// IMAGE
+@mixin bg_im($i...) {
+	background-image: $i;
+}
+// REPEAT
+@mixin bg_re($r:no-repeat) {
+	background-repeat: $r;
+}
+// POSITION
+@mixin bg_po($p:center) {
+	background-position: $p;
+}
+// ATTACHMENT
+@mixin bg_at($a:fixed) {
+	background-attachment: $a;
+}
+// SIZE
+@mixin bg_si($s:cover) {
+	background-size: $s;
+}
+// ORIGIN
+@mixin bg_or($o:content-box) {
+	background-origin: $o;
+}
+// CLIP
+@mixin bg_cl($c:content-box) {
+	background-clip: $c;
+}
+// --------------------------------
+@mixin bg_i($i...) {
+	background: $i;
+}
+// --------------------------------
+@mixin bg_ir($i, $r:no-repeat) {
+	background: $i $r;
+}
+@mixin bg_ip($i, $p:center) {
+	background: $i $p;
+}
+@mixin bg_ia($i, $a:fixed) {
+	background: $i $a;
+}
+@mixin bg_irp($i, $p:center, $r:no-repeat) {
+	background: $i $r $p;
+}
+@mixin bg_ira($i, $r:no-repeat, $a:fixed) {
+	background: $i $r $a;
+}
+@mixin bg_ipa($i, $p:center, $a:fixed) {
+	background: $i $p $a;
+}
+@mixin bg_irpa($i, $p:center, $r:no-repeat, $a:fixed) {
+	background: $i $r $p $a;
+}
+// --------------------------------
+@mixin bg_isr($i, $s:cover, $r:no-repeat) {
+	@include bg_ir($i, $r);
+	@include bg_si($s);
+}
+@mixin bg_isp($i, $s:cover, $p:center) {
+	@include bg_ip($i, $p);
+	@include bg_si($s);
+}
+@mixin bg_isa($i, $s:cover, $a:fixed) {
+	@include bg_ia($i, $a);
+	@include bg_si($s);
+}
+@mixin bg_isrp($i, $s:cover, $p:center, $r:no-repeat) {
+	@include bg_irp($i, $p, $r);
+	@include bg_si($s);
+}
+@mixin bg_isra($i, $s:cover, $r:no-repeat, $a:fixed) {
+	@include bg_ira($i, $r, $a);
+	@include bg_si($s);
+}
+@mixin bg_ispa($i, $s:cover, $p:center, $a:fixed) {
+	@include bg_ipa($i, $p, $a);
+	@include bg_si($s);
+}
+@mixin bg_isrpa($i, $s:cover, $p:center, $r:no-repeat, $a:fixed) {
+	@include bg_irpa($i, $p, $r, $a);
+	@include bg_si($s);
+}

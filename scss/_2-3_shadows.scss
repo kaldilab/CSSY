@@ -1,0 +1,157 @@
+/* ================================
+BOX SHADOW
+================================ */
+// INITIAL
+@mixin bs_in($in:none) {
+	box-shadow: $in;
+}
+// MULTIPLE
+@mixin bs_m($m...) {
+	box-shadow: $m;
+}
+// HORIZONTAL
+@mixin bs_h($h:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i $h 0 rgba($c, $a);
+	}
+	@else {
+		box-shadow: $h 0 rgba($c, $a);
+	}
+}
+// VERTICAL
+@mixin bs_v($v:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i 0 $v rgba($c, $a);
+	}
+	@else {
+		box-shadow: 0 $v rgba($c, $a);
+	}
+}
+// BLUR
+@mixin bs_b($b:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i 0 0 $b rgba($c, $a);
+	}
+	@else {
+		box-shadow: 0 0 $b rgba($c, $a);
+	}
+}
+// SPREAD
+@mixin bs_s($s:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i 0 0 0 $s rgba($c, $a);
+	}
+	@else {
+		box-shadow: 0 0 0 $s rgba($c, $a);
+	}
+}
+// --------------------------------
+@mixin bs_hv($h:1px, $v:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i $h $v rgba($c, $a);
+	}
+	@else {
+		box-shadow: $h $v rgba($c, $a);
+	}
+}
+@mixin bs_hb($h:1px, $b:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i $h 0 $b rgba($c, $a);
+	}
+	@else {
+		box-shadow: $h 0 $b rgba($c, $a);
+	}
+}
+@mixin bs_vb($v:1px, $b:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i 0 $v $b rgba($c, $a);
+	}
+	@else {
+		box-shadow: 0 $v $b rgba($c, $a);
+	}
+}
+@mixin bs_hs($h:1px, $s:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i $h 0 0 $s rgba($c, $a);
+	}
+	@else {
+		box-shadow: $h 0 0 $s rgba($c, $a);
+	}
+}
+@mixin bs_vs($v:1px, $s:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i 0 $v 0 $s rgba($c, $a);
+	}
+	@else {
+		box-shadow: 0 $v 0 $s rgba($c, $a);
+	}
+}
+@mixin bs_bs($b:1px, $s:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i 0 0 $b $s rgba($c, $a);
+	}
+	@else {
+		box-shadow: 0 0 $b $s rgba($c, $a);
+	}
+}
+@mixin bs_hvb($h:1px, $v:1px, $b:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i $h $v $b rgba($c, $a);
+	}
+	@else {
+		box-shadow: $h $v $b rgba($c, $a);
+	}
+}
+@mixin bs_hvs($h:1px, $v:1px, $s:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i $h $v 0 $s rgba($c, $a);
+	}
+	@else {
+		box-shadow: $h $v 0 $s rgba($c, $a);
+	}
+}
+@mixin bs_hvbs($h:1px, $v:1px, $b:1px, $s:1px, $c:$c-0, $a:1, $i:false) {
+	@if $i {
+		box-shadow: $i $h $v $b $s rgba($c, $a);
+	}
+	@else {
+		box-shadow: $h $v $b $s rgba($c, $a);
+	}
+}
+
+/* ================================
+TEXT SHADOW
+================================ */
+// INITIAL
+@mixin ts_in($in:none) {
+	text-shadow: $in;
+}
+// MULTIPLE
+@mixin ts_m($m...) {
+	text-shadow: $m;
+}
+// HORIZONTAL
+@mixin ts_h($h:1px, $c:$c-0, $a:1) {
+	text-shadow: $h 0 rgba($c, $a);
+}
+// VERTICAL
+@mixin ts_v($v:1px, $c:$c-0, $a:1) {
+	text-shadow: 0 $v rgba($c, $a);
+}
+// BLUR
+@mixin ts_b($b:1px, $c:$c-0, $a:1) {
+	text-shadow: 0 0 $b rgba($c, $a);
+}
+// --------------------------------
+@mixin ts_hv($h:1px, $v:1px, $c:$c-0, $a:1) {
+	text-shadow: $h $v rgba($c, $a);
+}
+@mixin ts_hb($h:1px, $b:1px, $c:$c-0, $a:1) {
+	text-shadow: $h 0 $b rgba($c, $a);
+}
+@mixin ts_vb($v:1px, $b:1px, $c:$c-0, $a:1) {
+	text-shadow: 0 $v $b rgba($c, $a);
+}
+@mixin ts_hvb($h:1px, $v:1px, $b:1px, $c:$c-0, $a:1) {
+	text-shadow: $h $v $b rgba($c, $a);
+}

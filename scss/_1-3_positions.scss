@@ -1,0 +1,177 @@
+/* ================================
+POSITIONS
+================================ */
+// TOP
+@mixin t($t:0) {
+	top: $t;
+}
+// BOTTOM
+@mixin b($b:0) {
+	bottom: $b
+}
+// LEFT
+@mixin l($l:0) {
+	left: $l;
+}
+// RIGHT
+@mixin r($r:0) {
+	right: $r;
+}
+// --------------------------------
+@mixin tb($t:0, $b:null) {
+	@if $b == null {
+		top: $t;
+		bottom: $t;
+	}
+	@if $b != null {
+		top: $t;
+		bottom: $b;
+	}
+}
+@mixin lr($l:0, $r:null) {
+	@if $r == null {
+		left: $l;
+		right: $l;
+	}
+	@if $r != null {
+		left: $l;
+		right: $r;
+	}
+}
+@mixin tl($t:0, $l:null) {
+	@if $l == null {
+		top: $t;
+		left: $t;
+	}
+	@if $l != null {
+		top: $t;
+		left: $l;
+	}
+}
+@mixin tr($t:0, $r:null) {
+	@if $r == null {
+		top: $t;
+		right: $t;
+	}
+	@if $r != null {
+		top: $t;
+		right: $r;
+	}
+}
+@mixin bl($b:0, $l:null) {
+	@if $l == null {
+		bottom: $b;
+		left: $b;
+	}
+	@if $l != null {
+		bottom: $b;
+		left: $l;
+	}
+}
+@mixin br($b:0, $r:null) {
+	@if $r == null {
+		bottom: $b;
+		right: $b;
+	}
+	@if $r != null {
+		bottom: $b;
+		right: $r;
+	}
+}
+@mixin tblr($t:0, $b:null, $l:0, $r:0) {
+	@if $b == null {
+		top: $t;
+		bottom: $t;
+		left: $t;
+		right: $t;
+	}
+	@if $b != null {
+		top: $t;
+		bottom: $b;
+		left: $l;
+		right: $r;
+	}
+}
+// --------------------------------
+// POSITION
+@mixin po($p:initial) {
+	position: $p;
+}
+@mixin poa() {
+	position: absolute;
+}
+@mixin pof() {
+	position: fixed;
+}
+@mixin por() {
+	position: relative;
+}
+@mixin pos() {
+	position: static;
+}
+// --------------------------------
+// POSITIONS - absolute
+@mixin poa1($t:0, $l:null) {
+	@include tl($t, $l);
+	position: absolute;
+}
+@mixin poa2($t:0, $r:null) {
+	@include tr($t, $r);
+	position: absolute;
+}
+@mixin poa3($b:0, $r:null) {
+	@include br($b, $r);
+	position: absolute;
+}
+@mixin poa4($b:0, $l:null) {
+	@include bl($b, $l);
+	position: absolute;
+}
+@mixin poa-all($t:0, $b:null, $l:0, $r:null) {
+	@include tblr($t, $b, $l, $r);
+	position: absolute;
+}
+// --------------------------------
+// POSITIONS - fixed
+@mixin pof1($t:0, $l:null) {
+	@include tl($t, $l);
+	position: fixed;
+}
+@mixin pof2($t:0, $r:null) {
+	@include tr($t, $r);
+	position: fixed;
+}
+@mixin pof3($b:0, $r:null) {
+	@include br($b, $r);
+	position: fixed;
+}
+@mixin pof4($b:0, $l:null) {
+	@include bl($b, $l);
+	position: fixed;
+}
+@mixin pof-all($t:0, $b:null, $l:0, $r:null) {
+	@include tblr($t, $b, $l, $r);
+	position: fixed;
+}
+// --------------------------------
+// POSITIONS - relative
+@mixin por1($t:0, $l:null) {
+	@include tl($t, $l);
+	position: relative;
+}
+@mixin por2($t:0, $r:null) {
+	@include tr($t, $r);
+	position: relative;
+}
+@mixin por3($b:0, $r:null) {
+	@include br($b, $r);
+	position: relative;
+}
+@mixin por4($b:0, $l:null) {
+	@include bl($b, $l);
+	position: relative;
+}
+@mixin por-all($t:0, $b:null, $l:0, $r:null) {
+	@include tblr($t, $b, $l, $r);
+	position: relative;
+}

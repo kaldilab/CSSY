@@ -1,0 +1,64 @@
+/* ================================
+COLUMNS
+================================ */
+// INITIAL
+.cl_in(@in:initial) {
+	columns: @in;
+}
+.cl_in-c(@in:initial) {
+	column-count: @in;
+}
+.cl_in-w(@in:initial) {
+	column-width: @in;
+}
+.cl_in-g(@in:initial) {
+	column-gap: @in;
+}
+// --------------------------------
+// COLUMNS
+.cl_col(@co:2, @wi:auto) {
+	columns: @wi @co;
+}
+// --------------------------------
+// COUNT
+.cl_co(@c:auto) {
+	column-count: @c;
+}
+// WIDTH
+.cl_wi(@w:auto) {
+	column-width: @w;
+}
+// GAP
+.cl_ga(@g:10px) {
+	column-gap: @g;
+}
+// RULE
+.cl_ru(@w:1px, @c:@c-0, @s:solid, @a:1) {
+	.rgba(@c, @a);
+	column-rule: @w @s @rgba;
+}
+// SPAN(Except Mozilla) - none, all
+.cl_sp(@s:all) {
+	column-span: @s;
+}
+// FILL - balance, auto
+.cl_fi(@f:auto) {
+	column-fill: @f;
+}
+// --------------------------------
+.cl_c(@co:2, @wi:auto) {
+	.cl_col(@wi, @co);
+}
+.cl_cg(@co:2, @wi:auto, @g:10px) {
+	.cl_col(@wi, @co);
+	.cl_ga(@g);
+}
+.cl_cr(@co:2, @wi:auto, @w:1px, @c:@c-0, @s:solid, @a:1) {
+	.cl_col(@wi, @co);
+	.cl_ru(@w, @c, @s, @a);
+}
+.cl_cgr(@co:2, @wi:auto, @g:10px, @w:1px, @c:@c-0, @s:solid, @a:1) {
+	.cl_col(@wi, @co);
+	.cl_ga(@g);
+	.cl_ru(@w, @c, @s, @a);
+}

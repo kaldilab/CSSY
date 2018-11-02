@@ -1,0 +1,104 @@
+/* ================================
+BOX SHADOW
+================================ */
+// INITIAL
+.bs_in(@in:none) {
+	box-shadow: @in;
+}
+// HORIZONTAL
+.bs_h(@h:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: @h 0 @rgba @i;
+}
+// VERTICAL
+.bs_v(@v:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: 0 @v @rgba @i;
+}
+// BLUR
+.bs_b(@b:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: 0 0 @b @rgba @i;
+}
+// SPREAD
+.bs_s(@s:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: 0 0 0 @s @rgba @i;
+}
+// --------------------------------
+.bs_hv(@h:1px, @v:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: @h @v @rgba @i;
+}
+.bs_hb(@h:1px, @b:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: @h 0 @b @rgba @i;
+}
+.bs_vb(@v:1px, @b:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: 0 @v @b @rgba @i;
+}
+.bs_hs(@h:1px, @s:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: @h 0 0 @s @rgba @i;
+}
+.bs_vs(@v:1px, @s:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: 0 @v 0 @s @rgba @i;
+}
+.bs_bs(@b:1px, @s:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: 0 0 @b @s @rgba @i;
+}
+.bs_hvb(@h:1px, @v:1px, @b:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: @h @v @b @rgba @i;
+}
+.bs_hvs(@h:1px, @v:1px, @s:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: @h @v 0 @s @rgba @i;
+}
+.bs_hvbs(@h:1px, @v:1px, @b:1px, @s:1px, @c:@c-0, @a:1, @i:e('')) {
+	.rgba(@c, @a);
+	box-shadow+: @h @v @b @s @rgba @i;
+}
+
+/* ================================
+TEXT SHADOW
+================================ */
+// INITIAL
+.ts_in(@in:none) {
+	text-shadow: @in;
+}
+// HORIZONTAL
+.ts_h(@h:1px, @c:@c-0, @a:1) {
+	.rgba(@c, @a);
+	text-shadow+: @h 0 @rgba;
+}
+// VERTICAL
+.ts_v(@v:1px, @c:@c-0, @a:1) {
+	.rgba(@c, @a);
+	text-shadow+: 0 @v @rgba;
+}
+// BLUR
+.ts_b(@b:1px, @c:@c-0, @a:1) {
+	.rgba(@c, @a);
+	text-shadow+: 0 0 @b @rgba;
+}
+// --------------------------------
+.ts_hv(@h:1px, @v:1px, @c:@c-0, @a:1) {
+	.rgba(@c, @a);
+	text-shadow+: @h @v @rgba;
+}
+.ts_hb(@h:1px, @b:1px, @c:@c-0, @a:1) {
+	.rgba(@c, @a);
+	text-shadow+: @h 0 @b @rgba;
+}
+.ts_vb(@v:1px, @b:1px, @c:@c-0, @a:1) {
+	.rgba(@c, @a);
+	text-shadow+: 0 @v @b @rgba;
+}
+.ts_hvb(@h:1px, @v:1px, @b:1px, @c:@c-0, @a:1) {
+	.rgba(@c, @a);
+	text-shadow+: @h @v @b @rgba;
+}

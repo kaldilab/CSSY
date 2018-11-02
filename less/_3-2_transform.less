@@ -1,0 +1,126 @@
+/* ================================
+TRANSFORM
+================================ */
+// INITIAL
+.tf_in(@in:none) {
+	transform: @in;
+}
+.tf_in-o(@in:initial) {
+	transform-origin: @in;
+}
+.tf_in-s(@in:initial) {
+	transform-style: @in;
+}
+// --------------------------------
+// TRANSLATE
+.tf_trx(@x:10px) {
+	transform+_: translateX(@x);
+}
+.tf_try(@y:10px) {
+	transform+_: translateY(@y);
+}
+.tf_trz(@z:10px) {
+	transform+_: translateZ(@z);
+}
+.tf_tr(@x:10px, @y:null, @z:null) {
+	& when (@y=null) and (@z=null) {
+		transform+_: translate(@x, @x);
+	}
+	& when not (@y=null) and (@z=null) {
+		transform+_: translate(@x, @y);
+	}
+	& when not (@y=null) and not (@z=null) {
+		transform+_: translate3d(@x, @y, @z);
+	}
+}
+// --------------------------------
+// SCALE
+.tf_scx(@x:1.5) {
+	transform+_: scaleX(@x);
+}
+.tf_scy(@y:1.5) {
+	transform+_: scaleY(@y);
+}
+.tf_scz(@z:1.5) {
+	transform+_: scaleZ(@z);
+}
+.tf_sc(@x:1.5, @y:null, @z:null) {
+	& when (@y=null) and (@z=null) {
+		transform+_: scale(@x, @x);
+	}
+	& when not (@y=null) and (@z=null) {
+		transform+_: scale(@x, @y);
+	}
+	& when not (@y=null) and not (@z=null) {
+		transform+_: scale3d(@x, @y, @z);
+	}
+}
+// --------------------------------
+// ROTATE
+.tf_rox(@x:10deg) {
+	transform+_: rotateX(@x);
+}
+.tf_roy(@y:10deg) {
+	transform+_: rotateY(@y);
+}
+.tf_roz(@z:10deg) {
+	transform+_: rotateZ(@z);
+}
+.tf_ro(@x:10deg, @y:null, @z:null) {
+	& when (@y=null) {
+		transform+_: rotate(@x);
+	}
+	& when not (@y=null) {
+		transform+_: rotateX(@x) rotateY(@y) rotateZ(@z);
+	}
+}
+// --------------------------------
+// SKEW
+.tf_skx(@x:10deg) {
+	transform+_: skewX(@x);
+}
+.tf_sky(@y:10deg) {
+	transform+_: skewY(@y);
+}
+.tf_sk(@x:10deg, @y:null) {
+	& when (@y=null) {
+		transform+_: skew(@x, @x);
+	}
+	& when not (@y=null) {
+		transform+_: skew(@x, @y);
+	}
+}
+// --------------------------------
+// ORIGIN
+.tf_or(@x:50%, @y:null) {
+	& when (@y=null) {
+		transform-origin: @x @x;
+	}
+	& when not (@y=null) {
+		transform-origin: @x @y;
+	}
+}
+// --------------------------------
+// PERSPECTIVE & PERSPECTIVE ORIGIN
+// @o:p(parent element), c(child element)
+.tf_pe(@p:100px, @o:c, @x:null, @y:null) {
+	& when (@o=c) and (@x=null) and (@y=null) {
+		transform+_: perspective(@p);
+	}
+	& when (@o=p) and (@x=null) and (@y=null) {
+		perspective: @p;
+	}
+	& when (@o=p) and not (@x=null) and (@y=null) {
+		perspective: @p;
+		perspective-origin: @x @x;
+	}
+	& when (@o=p) and not (@x=null) and not (@y=null) {
+		perspective: @p;
+		perspective-origin: @x @y;
+	}
+}
+// --------------------------------
+// STYLE - flat, preserve-3d
+.tf_st(@s:preserve-3d) {
+	transform-style: @s;
+}

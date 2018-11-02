@@ -1,0 +1,102 @@
+/* ================================
+BACKGROUND
+================================ */
+// INITIAL
+.bg_in(@in:none) {
+	background: @in;
+}
+.bg_in-c(@in:transparent) {
+	background-color: @in;
+}
+.bg_in-i(@in:none) {
+	background-image: @in;
+}
+// --------------------------------
+// COLOR
+.bg_co(@c:@c-0, @a:1) {
+	.rgba(@c, @a);
+	background-color: @rgba;
+}
+// IMAGE
+.bg_im(@i) {
+	background-image+: @i;
+}
+// REPEAT
+.bg_re(@r:no-repeat) {
+	background-repeat: @r;
+}
+// POSITION
+.bg_po(@p:center) {
+	background-position: @p;
+}
+// ATTACHMENT
+.bg_at(@a:fixed) {
+	background-attachment: @a;
+}
+// SIZE
+.bg_si(@s:cover) {
+	background-size: @s;
+}
+// ORIGIN
+.bg_or(@o:content-box) {
+	background-origin: @o;
+}
+// CLIP
+.bg_cl(@c:content-box) {
+	background-clip: @c;
+}
+// --------------------------------
+.bg_i(@i) {
+	background+: @i;
+}
+// --------------------------------
+.bg_ir(@i, @r:no-repeat) {
+	background: @i @r;
+}
+.bg_ip(@i, @p:center) {
+	background: @i @p;
+}
+.bg_ia(@i, @a:fixed) {
+	background: @i @a;
+}
+.bg_irp(@i, @p:center, @r:no-repeat) {
+	background: @i @r @p;
+}
+.bg_ira(@i, @r:no-repeat, @a:fixed) {
+	background: @i @r @a;
+}
+.bg_ipa(@i, @p:center, @a:fixed) {
+	background: @i @p @a;
+}
+.bg_irpa(@i, @p:center, @r:no-repeat, @a:fixed) {
+	background: @i @r @p @a;
+}
+// --------------------------------
+.bg_isr(@i, @s:cover, @r:no-repeat) {
+	.bg_ir(@i, @r);
+	.bg_si(@s);
+}
+.bg_isp(@i, @s:cover, @p:center) {
+	.bg_ip(@i, @p);
+	.bg_si(@s);
+}
+.bg_isa(@i, @s:cover, @a:fixed) {
+	.bg_ia(@i, @a);
+	.bg_si(@s);
+}
+.bg_isrp(@i, @s:cover, @p:center, @r:no-repeat) {
+	.bg_irp(@i, @p, @r);
+	.bg_si(@s);
+}
+.bg_isra(@i, @s:cover, @r:no-repeat, @a:fixed) {
+	.bg_ira(@i, @r, @a);
+	.bg_si(@s);
+}
+.bg_ispa(@i, @s:cover, @p:center, @a:fixed) {
+	.bg_ipa(@i, @p, @a);
+	.bg_si(@s);
+}
+.bg_isrpa(@i, @s:cover, @p:center, @r:no-repeat, @a:fixed) {
+	.bg_irpa(@i, @p, @r, @a);
+	.bg_si(@s);
+}

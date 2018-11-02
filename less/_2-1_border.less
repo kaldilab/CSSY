@@ -1,0 +1,121 @@
+/* ================================
+BORDER
+================================ */
+// INITIAL
+.bd_in(@in:none) {
+	border: @in;
+}
+.bd_in-t(@in:none) {
+	border-top: @in;
+}
+.bd_in-b(@in:none) {
+	border-bottom: @in;
+}
+.bd_in-l(@in:none) {
+	border-left: @in;
+}
+.bd_in-r(@in:none) {
+	border-right: @in;
+}
+.bd_in-tb(@in:none) {
+	border-top: @in;
+	border-bottom: @in;
+}
+.bd_in-lr(@in:none) {
+	border-left: @in;
+	border-right: @in;
+	border-right: @in;
+}
+.bd_in-tl(@in:none) {
+	border-top: @in;
+	border-left: @in;
+}
+.bd_in-tr(@in:none) {
+	border-top: @in;
+	border-right: @in;
+}
+.bd_in-br(@in:none) {
+	border-bottom: @in;
+	border-right: @in;
+}
+.bd_in-bl(@in:none) {
+	border-bottom: @in;
+	border-left: @in;
+}
+// --------------------------------
+.bd_w(@w:1px) {
+	border-width: @w;
+}
+.bd_c(@c:@c-0, @a:1) {
+	.rgba(@c, @a);
+	border-color: @rgba;
+}
+.bd_s(@s:solid) {
+	border-style: @s;
+}
+.bd_wc(@w:1px, @c:@c-0, @a:1) {
+	.rgba(@c, @a);
+	border-width: @w;
+	border-color: @rgba;
+}
+.bd_ws(@w:1px, @s:solid) {
+	border-width: @w;
+	border-style: @s;
+}
+.bd_cs(@c:@c-0, @a:1, @s:solid) {
+	.rgba(@c, @a);
+	border-color: @rgba;
+	border-style: @s;
+}
+// --------------------------------
+// TOP
+.bd_t(@w:1px, @c:@c-0, @a:1, @s:solid) {
+	.rgba(@c, @a);
+	border-top: @w @s @rgba;
+}
+// BOTTOM
+.bd_b(@w:1px, @c:@c-0, @a:1, @s:solid) {
+	.rgba(@c, @a);
+	border-bottom: @w @s @rgba;
+}
+// LEFT
+.bd_l(@w:1px, @c:@c-0, @a:1, @s:solid) {
+	.rgba(@c, @a);
+	border-left: @w @s @rgba;
+}
+// RIGHT
+.bd_r(@w:1px, @c:@c-0, @a:1, @s:solid) {
+	.rgba(@c, @a);
+	border-right: @w @s @rgba;
+}
+// --------------------------------
+.bd_tb(@w:1px, @c:@c-0, @a:1, @s:solid) {
+	.bd_t(@w, @c, @a, @s);
+	.bd_b(@w, @c, @a, @s);
+}
+.bd_lr(@w:1px, @c:@c-0, @a:1, @s:solid) {
+	.bd_l(@w, @c, @a, @s);
+	.bd_r(@w, @c, @a, @s);
+}
+.bd_tl(@w:1px, @c:@c-0, @a:1, @s:solid) {
+	.bd_t(@w, @c, @a, @s);
+	.bd_l(@w, @c, @a, @s);
+}
+.bd_tr(@w:1px, @c:@c-0, @a:1, @s:solid) {
+	.bd_t(@w, @c, @a, @s);
+	.bd_r(@w, @c, @a, @s);
+}
+.bd_br(@w:1px, @c:@c-0, @a:1, @s:solid) {
+	.bd_b(@w, @c, @a, @s);
+	.bd_r(@w, @c, @a, @s);
+}
+.bd_bl(@w:1px, @c:@c-0, @a:1, @s:solid) {
+	.bd_b(@w, @c, @a, @s);
+	.bd_l(@w, @c, @a, @s);
+}
+// --------------------------------
+// ALL
+.bd_all(@w:1px, @c:@c-0, @a:1, @s:solid) {
+	.rgba(@c, @a);
+	border: @w @s @rgba;
+}

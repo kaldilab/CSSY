@@ -1,0 +1,173 @@
+/* ================================
+FLEXBOX - FLEXBOX CONTAINER
+================================ */
+// INITIAL
+@mixin fc_in($in:block) {
+	display: $in;
+}
+@mixin fc_in-d($in:initial) {
+	flex-direction: $in;
+}
+@mixin fc_in-h($in:initial) {
+	justify-content: $in;
+}
+@mixin fc_in-v($in:initial) {
+	align-items: $in;
+}
+@mixin fc_in-w($in:initial) {
+	flex-wrap: $in;
+}
+@mixin fc_in-a($in:initial) {
+	align-content: $in;
+}
+@mixin fc_in-f($in:initial) {
+	flex-flow: $in;
+}
+// --------------------------------
+// FLEXBOX - flex, inline-flex
+@mixin fc_flex($f:flex) {
+	display: $f;
+}
+// DIRECTION - row, row-reverse, column, column-reverse
+@mixin fc_di($d:row) {
+	flex-direction: $d;
+}
+// JUSTIFY CONTENT(Horizontal) - flex-start, flex-end, center, space-between, space-around
+@mixin fc_ho($h:center) {
+	justify-content: $h;
+}
+// ALIGN ITEMS(Vertical) - flex-start, flex-end, center, baseline, stretch
+@mixin fc_ve($v:center) {
+	align-items: $v;
+}
+// WRAP - nowrap, wrap, wrap-reverse
+@mixin fc_wr($w:wrap) {
+	flex-wrap: $w;
+}
+// ALIGN CONTENT(Align) - flex-start, flex-end, center, space-between, space-around, stretch
+@mixin fc_al($a:center) {
+	align-content: $a;
+}
+// FLOW(Direction Wrap) - row, row-reverse, column, column-reverse | nowrap, wrap, wrap-reverse
+@mixin fc_fl($f1:row, $f2:wrap) {
+	flex-flow: $f1 $f2;
+}
+// --------------------------------
+@mixin fc_f($f:flex) {
+	@include fc_flex($f);
+}
+@mixin fc_fh($h:center, $f:flex) {
+	@include fc_flex($f);
+	@include fc_ho($h);
+}
+@mixin fc_fv($v:center, $f:flex) {
+	@include fc_flex($f);
+	@include fc_ve($v);
+}
+@mixin fc_fhv($h:center, $v:center, $f:flex) {
+	@include fc_flex($f);
+	@include fc_ho($h);
+	@include fc_ve($v);
+}
+// --------------------------------
+@mixin fc_ff($f1:row, $f2:wrap, $f:flex) {
+	@include fc_flex($f);
+	@include fc_fl($f1, $f2);
+}
+@mixin fc_ffh($f1:row, $f2:wrap, $h:center, $f:flex) {
+	@include fc_flex($f);
+	@include fc_fl($f1, $f2);
+	@include fc_ho($h);
+}
+@mixin fc_ffv($f1:row, $f2:wrap, $v:center, $f:flex) {
+	@include fc_flex($f);
+	@include fc_fl($f1, $f2);
+	@include fc_ve($v);
+}
+@mixin fc_ffa($f1:row, $f2:wrap, $a:center, $f:flex) {
+	@include fc_flex($f);
+	@include fc_fl($f1, $f2);
+	@include fc_al($a);
+}
+@mixin fc_ffhv($f1:row, $f2:wrap, $h:center, $v:center, $f:flex) {
+	@include fc_flex($f);
+	@include fc_fl($f1, $f2);
+	@include fc_ho($h);
+	@include fc_ve($v);
+}
+@mixin fc_ffha($f1:row, $f2:wrap, $h:center, $a:center, $f:flex) {
+	@include fc_flex($f);
+	@include fc_fl($f1, $f2);
+	@include fc_ho($h);
+	@include fc_al($a);
+}
+@mixin fc_ffva($f1:row, $f2:wrap, $v:center, $a:center, $f:flex) {
+	@include fc_flex($f);
+	@include fc_fl($f1, $f2);
+	@include fc_ve($v);
+	@include fc_al($a);
+}
+@mixin fc_ffhva($f1:row, $f2:wrap, $h:center, $v:center, $a:center, $f:flex) {
+	@include fc_flex($f);
+	@include fc_fl($f1, $f2);
+	@include fc_ho($h);
+	@include fc_ve($v);
+	@include fc_al($a);
+}
+
+/* ================================
+FLEXBOX - FLEXBOX ITEMS
+================================ */
+// INITIAL
+@mixin fi_in($in:none) {
+	flex: $in;
+}
+@mixin fi_in-g($in:initial) {
+	flex-grow: $in;
+}
+@mixin fi_in-s($in:initial) {
+	flex-shrink: $in;
+}
+@mixin fi_in-b($in:initial) {
+	flex-basis: $in;
+}
+@mixin fi_in-a($in:initial) {
+	align-self: $in;
+}
+@mixin fi_in-o($in:initial) {
+	order: $in;
+}
+// --------------------------------
+// FLEX
+@mixin fi_flex($g:auto, $s:1, $b:auto) {
+	@if type-of($g) == number {
+		flex: $g $s $b;
+	}
+	@if type-of($g) != number {
+		flex: $g;
+	}
+}
+// GROW
+@mixin fi_gr($g:1) {
+	flex-grow: $g;
+}
+// SHRINK
+@mixin fi_sh($s:1) {
+	flex-shrink: $s;
+}
+// BASIS
+@mixin fi_ba($b:50%) {
+	flex-basis: $b;
+}
+// ALIGN - flex-start, flex-end, center, baseline, stretch, auto
+@mixin fi_al($a:center) {
+	align-self: $a;
+}
+// ORDER
+@mixin fi_or($o:1) {
+	order: $o;
+}
+// --------------------------------
+@mixin fi_f($g:1, $s:1, $b:auto) {
+	@include fi_flex($g, $s, $b);
+}

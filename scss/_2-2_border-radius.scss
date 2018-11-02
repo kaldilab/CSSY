@@ -1,0 +1,69 @@
+/* ================================
+BORDER RADIUS
+================================ */
+// INITIAL
+@mixin br_in($in:initial) {
+	border-radius: $in;
+}
+@mixin br_in-a1($in:initial) {
+	border-top-left-radius: $in;
+}
+@mixin br_in-a2($in:initial) {
+	border-top-right-radius: $in;
+}
+@mixin br_in-a3($in:initial) {
+	border-bottom-right-radius: $in;
+}
+@mixin br_in-a4($in:initial) {
+	border-bottom-left-radius: $in;
+}
+// --------------------------------
+// ANGLE
+@mixin br_a1($r:5px) {
+	border-top-left-radius: $r;
+}
+@mixin br_a2($r:5px) {
+	border-top-right-radius: $r;
+}
+@mixin br_a3($r:5px) {
+	border-bottom-right-radius: $r;
+}
+@mixin br_a4($r:5px) {
+	border-bottom-left-radius: $r;
+}
+// --------------------------------
+// SIDE
+@mixin br_t($r:5px) {
+	@include br_a1($r);
+	@include br_a2($r);
+}
+@mixin br_b($r:5px) {
+	@include br_a4($r);
+	@include br_a3($r);
+}
+@mixin br_l($r:5px) {
+	@include br_a1($r);
+	@include br_a4($r);
+}
+@mixin br_r($r:5px) {
+	@include br_a2($r);
+	@include br_a3($r);
+}
+// --------------------------------
+// ALL
+@mixin br_all($r1:5px, $r2:null, $r3:5px, $r4:5px) {
+	@if $r2 == null {
+		border-radius: $r1;
+	}
+	@if $r2 != null {
+		@include br_a1($r1);
+		@include br_a2($r2);
+		@include br_a3($r3);
+		@include br_a4($r4);
+	}
+}
+// --------------------------------
+// CIRCLE
+@mixin br_cc($r:50%) {
+	border-radius: $r;
+}
