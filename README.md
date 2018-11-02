@@ -1,4 +1,4 @@
-# CSSY!
+# CSSY
 
 CSSY는 LESS-Styler를 변형하여<br>
 LESS와 SASS를 동일한 방식으로 믹스인화한<br>
@@ -15,8 +15,7 @@ CSS 전처리기 라이브러리(CSS Preprocessor Library) 입니다.
 ```sh
 Your Project/
 ├── mixins/
-│   ├── _mixins.less
-│   ├── _mixins.scss
+│   ├── _mixins.less(_mixins.scss)
 │   └── ...
 ├── (img)
 ├── (css)
