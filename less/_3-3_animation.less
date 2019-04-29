@@ -70,23 +70,23 @@ ANIMATION
 .am_t(@n:ani, @t:1s) {
 	animation+: @n @t;
 }
-.am_tw(@n:ani, @t:1s, @w:reverse) {
-	animation+: @n @t @w;
-}
 .am_td(@n:ani, @t:1s, @d:1s) {
 	animation+: @n @t @d;
 }
 .am_ti(@n:ani, @t:1s, @i:infinite) {
 	animation+: @n @t @i;
 }
-.am_twd(@n:ani, @t:1s, @w:reverse, @d:1s) {
-	animation+: @n @t @w @d;
-}
-.am_twi(@n:ani, @t:1s, @w:reverse, @i:infinite) {
-	animation+: @n @t @w @i;
+.am_tw(@n:ani, @t:1s, @w:reverse) {
+	animation+: @n @t @w;
 }
 .am_tdi(@n:ani, @t:1s, @d:1s, @i:infinite) {
 	animation+: @n @t @d @i;
+}
+.am_tdw(@n:ani, @t:1s, @d:1s, @w:reverse) {
+	animation+: @n @t @d @w;
+}
+.am_tiw(@n:ani, @t:1s, @i:infinite, @w:reverse) {
+	animation+: @n @t @i @w;
 }
 // --------------------------------
 // FUNCTION

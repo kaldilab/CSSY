@@ -75,23 +75,23 @@ ANIMATION
 @mixin am_t($n:ani, $t:1s) {
 	animation: $n $t;
 }
-@mixin am_tw($n:ani, $t:1s, $w:reverse) {
-	animation: $n $t $w;
-}
 @mixin am_td($n:ani, $t:1s, $d:1s) {
-	animation: $n $t $d;
+	animation+: $n $t $d;
 }
 @mixin am_ti($n:ani, $t:1s, $i:infinite) {
-	animation: $n $t $i;
+	animation+: $n $t $i;
 }
-@mixin am_twd($n:ani, $t:1s, $w:reverse, $d:1s) {
-	animation: $n $t $w $d;
-}
-@mixin am_twi($n:ani, $t:1s, $w:reverse, $i:infinite) {
-	animation: $n $t $w $i;
+@mixin am_tw($n:ani, $t:1s, $w:reverse) {
+	animation+: $n $t $w;
 }
 @mixin am_tdi($n:ani, $t:1s, $d:1s, $i:infinite) {
-	animation: $n $t $d $i;
+	animation+: $n $t $d $i;
+}
+@mixin am_tdw($n:ani, $t:1s, $d:1s, $w:reverse) {
+	animation+: $n $t $d $w;
+}
+@mixin am_tiw($n:ani, $t:1s, $i:infinite, $w:reverse) {
+	animation+: $n $t $i $w;
 }
 // --------------------------------
 // FUNCTION
