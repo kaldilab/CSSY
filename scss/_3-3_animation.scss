@@ -43,8 +43,8 @@ ANIMATION
 	animation-duration: $t;
 }
 // DIRECTION(Way) - normal, reverse, alternate, alternate-reverse
-@mixin am_di($d:reverse) {
-	animation-direction: $d;
+@mixin am_di($w:reverse) {
+	animation-direction: $w;
 }
 // DELAY
 @mixin am_de($d:1s) {
@@ -55,8 +55,8 @@ ANIMATION
 	animation-iteration-count: $i;
 }
 // FILL MODE - none, forwards, backwards, both
-@mixin am_fm($m:forwards) {
-	animation-fill-mode: $m;
+@mixin am_fm($f:both) {
+	animation-fill-mode: $f;
 }
 // PLAY STATE - paused, running
 @mixin am_ps($p:paused) {
@@ -67,31 +67,29 @@ ANIMATION
 	animation-timing-function: cubic-bezier($n1, $n2, $n3, $n4);
 }
 // --------------------------------
-// MULTIPLE
-@mixin am_m($m) {
-	animation: $m;
+@mixin am_t($n:ani, $t:1s, $f:both) {
+	animation+: $n $t $f;
 }
-// --------------------------------
-@mixin am_t($n:ani, $t:1s) {
-	animation: $n $t;
+@mixin am_td($n:ani, $t:1s, $d:1s, $f:both) {
+	animation+: $n $t $d $f;
 }
-@mixin am_td($n:ani, $t:1s, $d:1s) {
-	animation+: $n $t $d;
+@mixin am_ti($n:ani, $t:1s, $i:infinite, $f:both) {
+	animation+: $n $t $i $f;
 }
-@mixin am_ti($n:ani, $t:1s, $i:infinite) {
-	animation+: $n $t $i;
+@mixin am_tw($n:ani, $t:1s, $w:reverse, $f:both) {
+	animation+: $n $t $w $f;
 }
-@mixin am_tw($n:ani, $t:1s, $w:reverse) {
-	animation+: $n $t $w;
+@mixin am_tdi($n:ani, $t:1s, $d:1s, $i:infinite, $f:both) {
+	animation+: $n $t $d $i $f;
 }
-@mixin am_tdi($n:ani, $t:1s, $d:1s, $i:infinite) {
-	animation+: $n $t $d $i;
+@mixin am_tdw($n:ani, $t:1s, $d:1s, $w:reverse, $f:both) {
+	animation+: $n $t $d $w $f;
 }
-@mixin am_tdw($n:ani, $t:1s, $d:1s, $w:reverse) {
-	animation+: $n $t $d $w;
+@mixin am_tiw($n:ani, $t:1s, $i:infinite, $w:reverse, $f:both) {
+	animation+: $n $t $i $w $f;
 }
-@mixin am_tiw($n:ani, $t:1s, $i:infinite, $w:reverse) {
-	animation+: $n $t $i $w;
+@mixin am_tdiw($n:ani, $t:1s, $d:1s, $i:infinite, $w:reverse, $f:both) {
+	animation+: $n $t $d $i $w $f;
 }
 // --------------------------------
 // FUNCTION

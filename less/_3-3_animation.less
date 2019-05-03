@@ -43,8 +43,8 @@ ANIMATION
 	animation-duration: @t;
 }
 // DIRECTION(Way) - normal, reverse, alternate, alternate-reverse
-.am_di(@d:reverse) {
-	animation-direction: @d;
+.am_di(@w:reverse) {
+	animation-direction: @w;
 }
 // DELAY
 .am_de(@d:1s) {
@@ -55,8 +55,8 @@ ANIMATION
 	animation-iteration-count: @i;
 }
 // FILL MODE - none, forwards, backwards, both
-.am_fm(@m:forwards) {
-	animation-fill-mode: @m;
+.am_fm(@f:both) {
+	animation-fill-mode: @f;
 }
 // PLAY STATE - paused, running
 .am_ps(@p:paused) {
@@ -67,26 +67,29 @@ ANIMATION
 	animation-timing-function: cubic-bezier(@n1, @n2, @n3, @n4);
 }
 // --------------------------------
-.am_t(@n:ani, @t:1s) {
-	animation+: @n @t;
+.am_t(@n:ani, @t:1s, @f:both) {
+	animation+: @n @t @f;
 }
-.am_td(@n:ani, @t:1s, @d:1s) {
-	animation+: @n @t @d;
+.am_td(@n:ani, @t:1s, @d:1s, @f:both) {
+	animation+: @n @t @d @f;
 }
-.am_ti(@n:ani, @t:1s, @i:infinite) {
-	animation+: @n @t @i;
+.am_ti(@n:ani, @t:1s, @i:infinite, @f:both) {
+	animation+: @n @t @i @f;
 }
-.am_tw(@n:ani, @t:1s, @w:reverse) {
-	animation+: @n @t @w;
+.am_tw(@n:ani, @t:1s, @w:reverse, @f:both) {
+	animation+: @n @t @w @f;
 }
-.am_tdi(@n:ani, @t:1s, @d:1s, @i:infinite) {
-	animation+: @n @t @d @i;
+.am_tdi(@n:ani, @t:1s, @d:1s, @i:infinite, @f:both) {
+	animation+: @n @t @d @i @f;
 }
-.am_tdw(@n:ani, @t:1s, @d:1s, @w:reverse) {
-	animation+: @n @t @d @w;
+.am_tdw(@n:ani, @t:1s, @d:1s, @w:reverse, @f:both) {
+	animation+: @n @t @d @w @f;
 }
-.am_tiw(@n:ani, @t:1s, @i:infinite, @w:reverse) {
-	animation+: @n @t @i @w;
+.am_tiw(@n:ani, @t:1s, @i:infinite, @w:reverse, @f:both) {
+	animation+: @n @t @i @w @f;
+}
+.am_tdiw(@n:ani, @t:1s, @d:1s, @i:infinite, @w:reverse, @f:both) {
+	animation+: @n @t @d @i @w @f;
 }
 // --------------------------------
 // FUNCTION
