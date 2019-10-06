@@ -68,28 +68,28 @@ ANIMATION
 }
 // --------------------------------
 @mixin am_t($n:ani, $t:1s, $f:both) {
-	animation+: $n $t $f;
+	animation: $n $t $f;
 }
 @mixin am_td($n:ani, $t:1s, $d:1s, $f:both) {
-	animation+: $n $t $d $f;
+	animation: $n $t $d $f;
 }
 @mixin am_ti($n:ani, $t:1s, $i:infinite, $f:both) {
-	animation+: $n $t $i $f;
+	animation: $n $t $i $f;
 }
 @mixin am_tw($n:ani, $t:1s, $w:reverse, $f:both) {
-	animation+: $n $t $w $f;
+	animation: $n $t $w $f;
 }
 @mixin am_tdi($n:ani, $t:1s, $d:1s, $i:infinite, $f:both) {
-	animation+: $n $t $d $i $f;
+	animation: $n $t $d $i $f;
 }
 @mixin am_tdw($n:ani, $t:1s, $d:1s, $w:reverse, $f:both) {
-	animation+: $n $t $d $w $f;
+	animation: $n $t $d $w $f;
 }
 @mixin am_tiw($n:ani, $t:1s, $i:infinite, $w:reverse, $f:both) {
-	animation+: $n $t $i $w $f;
+	animation: $n $t $i $w $f;
 }
 @mixin am_tdiw($n:ani, $t:1s, $d:1s, $i:infinite, $w:reverse, $f:both) {
-	animation+: $n $t $d $i $w $f;
+	animation: $n $t $d $i $w $f;
 }
 // --------------------------------
 // FUNCTION
