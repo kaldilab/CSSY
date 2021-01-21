@@ -1,12 +1,8 @@
 # CSSY
 
-CSSY는 LESS-Styler를 변주하여<br>
-LESS와 SASS를 동일한 방식으로 믹스인화한<br>
-CSS 전처리기 라이브러리(CSS Preprocessor Library) 입니다.
+LESS나 SCSS는 변수(Variable)나 중첩 규칙(Nested Rules) 등을 사용해 CSS 작성의 효율성을 높이는 CSS 전처리기(CSS Preprocessor)이다. CSSY는 LESS와 SCSS를 활용하여 CSS의 모든 속성을 '극단적으로' 믹스인화한 LESS & SCSS 믹스인 라이브러리(Mixin Library)이다.
 
 <a align="center" href="http://kaldilab.com/cssy"><img width="100%" src="http://iiago.cdn2.cafe24.com/images/cssy.jpg" alt="Kaldi Lab - CSSY"></a>
-
-> LESS & SASS Mixin Library `v1.0.0`
 
 ## Usage
 
@@ -40,4 +36,4 @@ Your Project/
 
 [Kaldi Lab](http://kaldilab.com/)의 CSSY Website의 설명을 참고하세요.
 
-- [CSSY](http://kaldilab.com/cssy/)
+- [CSSY](http://kaldilab.com/wp/cssy/)
